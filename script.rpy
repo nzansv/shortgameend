@@ -13,10 +13,13 @@ define audio.alarm = "audio/alarm.mp3"
 define audio.door = "audio/door.mp3"
 define audio.schoolbell = "audio/schoolbell.mp3"
 define audio.heart = "audio/heart.mp3"
+define audio.zip = "audio/zip.mp3"
+define audio.classroom = "audio/classroom.mp3"
 
 
 #  Первый день:
 label start:
+    stop music fadeout 1.0
 
     $ mainname = renpy.input("Как вас зовут?")
 
@@ -25,9 +28,8 @@ label start:
     scene black with vpunch
 
     b "БЗЗЗЗЗЗЗЗЗЗ!!!!"
-    b "БЗЗЗЗЗЗЗЗЗЗ!!!!"
 
-    stop sound
+    stop sound fadeout 1.0
 
     scene morning room
     with fade
@@ -50,7 +52,9 @@ label start:
     "{i}Как всегда она слишком заботлива...{i}"
     "{i}Пора собираться в школу...{i}"
     scene black with fade
+    play sound zip
     b "..."
+    stop sound fadeout 1.0
     scene saitoru
     "{i}Первый день, а я уже устал от этой формы.{i}"
 
@@ -130,4 +134,12 @@ label zabrat_cota:
 
 label cat_ne_nuzhen:
     "Странные нынче коты..."
+    play sound schoolbell
+    scene black with fade
+    scene school room with fade
+    "{i}Обычный день обычного старшеклассника. Ничего нового...{i}"
+    stop sound fadeout 1.0
+    scene night room with fade
+    "{i}...{i}"
+
     return

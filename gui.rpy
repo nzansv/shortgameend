@@ -86,9 +86,11 @@ define gui.title_text_size = 75
 ## Главное и игровое меню. #####################################################
 
 ## Изображения, используемые в главном и игровом меню.
-define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.main_menu_background = "gui/main_menu.jpeg"
+define gui.game_menu_background = "gui/game_menu.jpeg"
 
+## Музыка главного меню.
+define config.main_menu_music = "my_music_theme.mp3"
 
 ## Диалог ######################################################################
 ##
@@ -107,7 +109,7 @@ define gui.textbox_yalign = 1.0
 ## процентное отношение, например, 0.5 для центрирования.
 define gui.name_xpos = 360
 define gui.name_ypos = 0
-
+define gui.show_name = False
 ## Горизонтальное выравнивание имени персонажа. Это может быть 0.0 для
 ## левоориентированного, 0.5 для центрированного и 1.0 для правоориентированного
 ## выравнивания.
