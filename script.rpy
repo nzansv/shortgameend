@@ -1,6 +1,4 @@
-﻿# Вы можете расположить сценарий своей игры в этом файле.
-
-# Определение персонажей игры.
+﻿# Персонажи.
 define s = Character("[mainname]", color="#ffffff")
 define b = Character('...', color="#ffffff")
 define m = Character('Мама', color="#ffffff")
@@ -77,7 +75,7 @@ label start:
             jump cat_ne_nuzhen
     
     return
-
+# Дефолт концовка первого дня
 label zabrat_cota:
     hide cat scream
     "Ну что ты разорался тут?"
